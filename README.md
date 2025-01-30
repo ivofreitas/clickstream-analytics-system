@@ -112,5 +112,5 @@ docker-compose up -d
 PRs are welcome! Fork the repo and submit a pull request.
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the Apache-2.0 License.
 
