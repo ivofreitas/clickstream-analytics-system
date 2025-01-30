@@ -78,29 +78,10 @@ curl -X POST "http://localhost:8080/track" -H "Content-Type: application/json" -
 curl -X GET "http://localhost:8080/analytics/page-views/home"
 ```
 
-## Monitoring
-### **Prometheus Metrics**
-```sh
-http://localhost:8080/metrics
-```
-
-### **Grafana Dashboard**
-- Open Grafana (`http://localhost:3000`)
-- Use Prometheus as a data source (`http://localhost:9090`)
-- Import dashboard JSON file for real-time metrics
-
 ## GraphQL API
 ### **Query analytics using GraphQL**
 ```sh
 curl -X POST "http://localhost:8080/graphql" -H "Content-Type: application/json" -d '{ "query": "{ pageViews(pageURL: \"/home\") }" }'
-```
-
-## Scaling
-### **Unified `docker-compose.yml` for Cassandra Multi-Node, Kafka, Prometheus, Grafana, and Backend**
-Modify `docker-compose.yml` to integrate all services
-Start all services:
-```sh
-docker-compose up -d
 ```
 
 ## Next Steps
